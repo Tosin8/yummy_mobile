@@ -1,6 +1,6 @@
 # master_chef_app_form
 
-A restuarant app form made in flutter 
+A resturant app form made in flutter 
 
 Below are the screenshots of the repo
 
