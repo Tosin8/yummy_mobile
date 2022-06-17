@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
-class LoginIN extends StatelessWidget {
-  const LoginIN({Key? key}) : super(key: key);
+class LoginIn extends StatelessWidget {
+  const LoginIn({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return const Scaffold(
+      body: Column(
+        children: [
+          
+
+        ]));
   }
 }
