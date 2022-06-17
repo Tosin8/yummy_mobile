@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-i
+import 'package:master_chef_app_form/screens/forgot_pass.dart';
 
 class LoginIn extends StatefulWidget {
   const LoginIn({Key? key}) : super(key: key);
@@ -112,7 +112,12 @@ class _LoginInState extends State<LoginIn> {
                     ))),
               ),
               GestureDetector(
-                onTap: () => Navigator.pushNamed(context, 'ForgottenPassword'),
+                onTap: () => Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ForgottenPassword(),
+                    )),
+                //Navigator.pushNamed(context, 'ForgottenPassword'),
                 child: const Padding(
                     padding: EdgeInsets.only(left: 300),
                     child: Text('Forgot Password')),
