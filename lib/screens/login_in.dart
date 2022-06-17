@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart'
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class LoginIn extends StatelessWidget {
+class LoginIn extends StatefulWidget {
   const LoginIn({Key? key}) : super(key: key);
 
+  @override
+  State<LoginIn> createState() => _LoginInState();
+}
+
+class _LoginInState extends State<LoginIn> {
   @override
   Widget build(BuildContext context) {
     return Stack(children: [
@@ -25,33 +30,136 @@ class LoginIn extends StatelessWidget {
           )),
       Scaffold(
           backgroundColor: Colors.transparent,
-          body: Column(children: [
-            Flexible(
-              child: Image.asset('assets/images/logo.png'),
-            ),
-            const SizedBox(height: 4),
-            const Text('Welcome back User!',
-                style: TextStyle(color: Colors.white, fontSize: 20)),
-            const SizedBox(height: 20),
-            Container(
-                height: 70,
-                decoration: BoxDecoration(
-                  color: Colors.grey[500]?.withOpacity(0.5),
-                  borderRadius: BorderRadius.circular(16),
+          body: Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 50),
+                child: Flexible(
+                  child: Image.asset('assets/images/logo.png'),
                 ),
-                child: const Center(
-                  child: TextField(
-                      decoration: InputDecoration(
-                    border: InputBorder.none,
-                    prefixIcon: Icon(
-                      FontAwesomeIcons.envelope,
-                      size: 30,
+              ),
+              const SizedBox(height: 20),
+              const Text('Welcome back User',
+                  style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold)),
+              const SizedBox(height: 50),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                child: Container(
+                    height: 70,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[500]?.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(16),
                     ),
-                    hintText: 'Email',
-                    hintStyle: TextStyle(fontSize: 22, color: Colors.white),
-                  )),
-                ))
-          ]))
+                    child: const Center(
+                        child: TextField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        prefixIcon: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 20.0),
+                          child: Icon(
+                            FontAwesomeIcons.envelope,
+                            size: 30,
+                            color: Colors.white,
+                          ),
+                        ),
+                        hintText: 'Email',
+                        hintStyle: TextStyle(fontSize: 22, color: Colors.white),
+                      ),
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: Colors.white,
+                        height: 1.5,
+                      ),
+                      keyboardType: TextInputType.emailAddress,
+                      textInputAction: TextInputAction.next,
+                    ))),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 10.0),
+                child: Container(
+                    height: 70,
+                    decoration: BoxDecoration(
+                      color: Colors.grey[500]?.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    child: const Center(
+                        child: TextField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                        prefixIcon: Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 20.0),
+                          child: Icon(
+                            FontAwesomeIcons.lock,
+                            size: 30,
+                            color: Colors.white,
+                          ),
+                        ),
+                        hintText: 'Password',
+                        hintStyle: TextStyle(fontSize: 22, color: Colors.white),
+                      ),
+                      obscureText: true,
+                      style: TextStyle(
+                        fontSize: 22,
+                        color: Colors.white,
+                        height: 1.5,
+                      ),
+                      keyboardType: TextInputType.visiblePassword,
+                      textInputAction: TextInputAction.done,
+                    ))),
+              ),
+              const Padding(
+                  padding: EdgeInsets.only(left: 300),
+                  child: Text('Forgot Password')),
+              const SizedBox(height: 25),
+              const RoundedButton(
+                buttonName: 'Login',
+              ),
+              const SizedBox(height: 25),
+              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                const Text('Create new account'),
+                TextButton(
+                    onPressed: () {},
+                    child: const Text(
+                      ' Sign Up',
+                      style: TextStyle(color: Colors.lightBlueAccent),
+                    ))
+              ]),
+            ],
+          ))
     ]);
+  }
+}
+
+class RoundedButton extends StatelessWidget {
+  const RoundedButton({
+    Key? key,
+    required this.buttonName,
+  }) : super(key: key);
+
+  final String buttonName;
+
+  @override
+  Widget build(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      height: size.height * 0.08,
+      width: size.width * 0.8,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(16),
+        color: const Color(0xff5663ff),
+      ),
+      child: TextButton(
+          onPressed: () {},
+          child: Text(buttonName,
+              style: const TextStyle(
+                fontSize: 22,
+                color: Colors.white,
+                height: 1.5,
+                fontWeight: FontWeight.bold,
+              ))),
+    );
   }
 }
