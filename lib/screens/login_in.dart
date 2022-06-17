@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart'
 
 class LoginIn extends StatelessWidget {
   const LoginIn({Key? key}) : super(key: key);
@@ -35,15 +36,21 @@ class LoginIn extends StatelessWidget {
             Container(
                 height: 70,
                 decoration: BoxDecoration(
-                  color: Colors.grey[500].withOpacity(0.5),
+                  color: Colors.grey[500]?.withOpacity(0.5),
                   borderRadius: BorderRadius.circular(16),
                 ),
-                child: const TextField(
-                    decoration: InputDecoration(
-                  border: InputBorder.none,
-                  hintText: 'Email',
-                  hintStyle: TextStyle(fontSize: 22, color: Colors.white),
-                )))
+                child: const Center(
+                  child: TextField(
+                      decoration: InputDecoration(
+                    border: InputBorder.none,
+                    prefixIcon: Icon(
+                      FontAwesomeIcons.envelope,
+                      size: 30,
+                    ),
+                    hintText: 'Email',
+                    hintStyle: TextStyle(fontSize: 22, color: Colors.white),
+                  )),
+                ))
           ]))
     ]);
   }
