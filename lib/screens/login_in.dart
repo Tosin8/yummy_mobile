@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+i
 
 class LoginIn extends StatefulWidget {
   const LoginIn({Key? key}) : super(key: key);
@@ -110,9 +111,12 @@ class _LoginInState extends State<LoginIn> {
                       textInputAction: TextInputAction.done,
                     ))),
               ),
-              const Padding(
-                  padding: EdgeInsets.only(left: 300),
-                  child: Text('Forgot Password')),
+              GestureDetector(
+                onTap: () => Navigator.pushNamed(context, 'ForgottenPassword'),
+                child: const Padding(
+                    padding: EdgeInsets.only(left: 300),
+                    child: Text('Forgot Password')),
+              ),
               const SizedBox(height: 25),
               const RoundedButton(
                 buttonName: 'Login',
