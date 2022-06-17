@@ -85,7 +85,9 @@ class _ForgottenPasswordState extends State<ForgottenPassword> {
               Row(mainAxisAlignment: MainAxisAlignment.center, children: [
                 const Text('Make attempt again'),
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
                     child: const Text(
                       ' Login',
                       style: TextStyle(color: Colors.lightBlueAccent),
