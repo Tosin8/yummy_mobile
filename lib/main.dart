@@ -5,5 +5,5 @@ void main() {
   runApp(const MaterialApp(
       title: 'Master Chef',
       debugShowCheckedModeBanner: false,
-      home: LoginIn()));
+      home: Splash_Screen()));
 }
