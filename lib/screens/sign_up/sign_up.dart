@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:master_chef_app_form/screens/login_in.dart';
+import 'package:master_chef_app_form/screens/log_in/login_in.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
