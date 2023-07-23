@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:master_chef_app_form/screens/home_page/homepage.dart';
 
 import 'dart:async';
 
@@ -22,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const LoginIn(),
+            builder: (context) => const HomePage(),
           ),
         );
       },
