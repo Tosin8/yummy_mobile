@@ -3,8 +3,6 @@ import 'package:master_chef_app_form/screens/home_page/homepage.dart';
 
 import 'dart:async';
 
-import 'log_in/login_in.dart';
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
