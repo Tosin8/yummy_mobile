@@ -10,7 +10,7 @@ class WelcomePage extends StatelessWidget {
         width: 390,
         height: 844,
         clipBehavior: Clip.antiAlias,
-        decoration: BoxDecoration(color: Colors.white),
+        decoration: const BoxDecoration(color: Colors.white),
         child: Stack(
           children: [
             Positioned(
@@ -19,7 +19,7 @@ class WelcomePage extends StatelessWidget {
               child: Container(
                 width: 401,
                 height: 844,
-                decoration: BoxDecoration(color: Color(0xFFD9D9D9)),
+                decoration: const BoxDecoration(color: Color(0xFFD9D9D9)),
               ),
             ),
             Positioned(
@@ -37,14 +37,14 @@ class WelcomePage extends StatelessWidget {
                         width: 299,
                         height: 61,
                         decoration: ShapeDecoration(
-                          color: Color(0xFFE2CA5C),
+                          color: const Color(0xFFE2CA5C),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(30),
                           ),
                         ),
                       ),
                     ),
-                    Positioned(
+                    const Positioned(
                       left: 99,
                       top: 20,
                       child: Text(
@@ -67,7 +67,7 @@ class WelcomePage extends StatelessWidget {
               child: Container(
                 width: 211,
                 height: 109,
-                child: Stack(
+                child: const Stack(
                   children: [
                     Positioned(
                       left: 7,
@@ -120,7 +120,7 @@ class WelcomePage extends StatelessWidget {
                 height: 47,
                 child: Stack(
                   children: [
-                    Positioned(
+                    const Positioned(
                       left: 0,
                       top: 0,
                       child: SizedBox(
@@ -143,7 +143,7 @@ class WelcomePage extends StatelessWidget {
                       child: Container(
                         width: 11,
                         height: 11,
-                        decoration: ShapeDecoration(
+                        decoration: const ShapeDecoration(
                           color: Colors.black,
                           shape: OvalBorder(),
                           shadows: [
@@ -175,7 +175,7 @@ class WelcomePage extends StatelessWidget {
                       child: Container(
                         width: 390,
                         height: 487,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0xB2D9D9D9),
                           boxShadow: [
                             BoxShadow(
@@ -244,10 +244,11 @@ class WelcomePage extends StatelessWidget {
                                                 child: Container(
                                                   width: 431.65,
                                                   height: 288.18,
-                                                  decoration: BoxDecoration(
+                                                  decoration:
+                                                      const BoxDecoration(
                                                     image: DecorationImage(
-                                                      image: NetworkImage(
-                                                          "https://via.placeholder.com/432x288"),
+                                                      image: AssetImage(
+                                                          "assets/images/pancake_berry_1.jpg"),
                                                       fit: BoxFit.fill,
                                                     ),
                                                   ),
@@ -288,10 +289,10 @@ class WelcomePage extends StatelessWidget {
                                         child: Container(
                                           width: 197.90,
                                           height: 296.15,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             image: DecorationImage(
-                                              image: NetworkImage(
-                                                  "https://via.placeholder.com/198x296"),
+                                              image: AssetImage(
+                                                  'assets/images/cake_berry.jpg'),
                                               fit: BoxFit.fill,
                                             ),
                                           ),
@@ -340,10 +341,11 @@ class WelcomePage extends StatelessWidget {
                                         child: Container(
                                           width: 226.47,
                                           height: 312.71,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             image: DecorationImage(
-                                              image: NetworkImage(
-                                                  "https://via.placeholder.com/226x313"),
+                                              image: AssetImage(
+                                                'assets/images/sandwish.jpg',
+                                              ),
                                               fit: BoxFit.fill,
                                             ),
                                           ),
@@ -392,10 +394,11 @@ class WelcomePage extends StatelessWidget {
                                         child: Container(
                                           width: 189.74,
                                           height: 281.89,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             image: DecorationImage(
-                                              image: NetworkImage(
-                                                  "https://via.placeholder.com/190x282"),
+                                              image: AssetImage(
+                                                'assets/images/spaghetti.jpg',
+                                              ),
                                               fit: BoxFit.fill,
                                             ),
                                           ),
@@ -444,10 +447,10 @@ class WelcomePage extends StatelessWidget {
                                         child: Container(
                                           width: 193.06,
                                           height: 298.38,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             image: DecorationImage(
-                                              image: NetworkImage(
-                                                  "https://via.placeholder.com/193x298"),
+                                              image: AssetImage(
+                                                  'assets/images/strawberry.jpg'),
                                               fit: BoxFit.fill,
                                             ),
                                           ),
@@ -496,10 +499,10 @@ class WelcomePage extends StatelessWidget {
                                         child: Container(
                                           width: 268.31,
                                           height: 287.31,
-                                          decoration: BoxDecoration(
+                                          decoration: const BoxDecoration(
                                             image: DecorationImage(
-                                              image: NetworkImage(
-                                                  "https://via.placeholder.com/268x287"),
+                                              image: AssetImage(
+                                                  'assets/images/pancake_berry.jpg'),
                                               fit: BoxFit.fill,
                                             ),
                                           ),
