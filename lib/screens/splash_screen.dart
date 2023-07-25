@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yummy_mobile/screens/welcome_page.dart';
 
 import 'dart:async';
 
@@ -23,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const HomePage(),
+            builder: (context) => const WelcomePage(),
           ),
         );
       },
