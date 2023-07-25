@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'dart:async';
 
+import '../constants.dart';
 import 'home_page/homepage.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -45,7 +46,7 @@ class _SplashScreenState extends State<SplashScreen> {
             child: Container(
               width: 390,
               height: 844,
-              decoration: BoxDecoration(color: Color(0xFFFFE157)),
+              decoration: const BoxDecoration(color: kPrimaryColor),
             ),
           ),
           Positioned(

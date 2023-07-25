@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:master_chef_app_form/screens/forgot_pass.dart';
-import 'package:master_chef_app_form/screens/sign_up/sign_up.dart';
+
+import '../forgot_pass.dart';
+import '../sign_up/sign_up.dart';
 
 class LoginIn extends StatefulWidget {
   const LoginIn({Key? key}) : super(key: key);
