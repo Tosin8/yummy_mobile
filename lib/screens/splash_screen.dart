@@ -30,7 +30,7 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 
-  // TODO: making the text to fade in, then bounce up and down before moving to the next page.
+  // TODO: making the text to fade in, then bounce up and down before moving to the next page, also adding responsive page elements.
 
   @override
   Widget build(BuildContext context) {
