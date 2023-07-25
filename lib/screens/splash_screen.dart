@@ -18,7 +18,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     Future.delayed(
-      const Duration(seconds: 3),
+      const Duration(seconds: 30),
       () {
         Navigator.push(
           context,
@@ -30,6 +30,8 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 
+  // TODO: making the text to fade in, then bounce up and down before moving to the next page.
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,7 +39,7 @@ class _SplashScreenState extends State<SplashScreen> {
       width: 390,
       height: 844,
       clipBehavior: Clip.antiAlias,
-      decoration: BoxDecoration(color: Colors.white),
+      decoration: const BoxDecoration(color: Colors.white),
       child: Stack(
         children: [
           Positioned(
@@ -57,7 +59,7 @@ class _SplashScreenState extends State<SplashScreen> {
               height: 202,
               child: Stack(
                 children: [
-                  Positioned(
+                  const Positioned(
                     left: 19,
                     top: 0,
                     child: SizedBox(
@@ -80,7 +82,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     child: Container(
                       width: 19,
                       height: 19,
-                      decoration: ShapeDecoration(
+                      decoration: const ShapeDecoration(
                         color: Colors.black,
                         shape: OvalBorder(),
                         shadows: [
@@ -94,7 +96,7 @@ class _SplashScreenState extends State<SplashScreen> {
                       ),
                     ),
                   ),
-                  Positioned(
+                  const Positioned(
                     left: 0,
                     top: 184,
                     child: Text(
