@@ -4,7 +4,6 @@ import 'package:yummy_mobile/screens/welcome_page.dart';
 import 'dart:async';
 
 import '../constants.dart';
-import 'home_page/homepage.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
