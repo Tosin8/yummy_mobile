@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     Future.delayed(
-      const Duration(seconds: 30),
+      const Duration(seconds: 15),
       () {
         Navigator.push(
           context,
