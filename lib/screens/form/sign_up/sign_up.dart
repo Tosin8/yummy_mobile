@@ -58,11 +58,17 @@ class _SignUpState extends State<SignUp> {
                           color: Colors.white10,
                           borderRadius: BorderRadius.circular(5),
                           border: Border.all(color: kSecondaryColor)),
-                      child: TextField(
+                      child: const TextField(
                         keyboardType: TextInputType.emailAddress,
                         style: TextStyle(
                           color: Colors.white,
                         ),
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            contentPadding: EdgeInsets.only(top: 14.0),
+                            prefixIcon: Icon(Icons.email, color: Colors.black),
+                            hintText: 'Enter your Email',
+                            hintStyle: kFormLabelTextStyle),
                       ))
                 ]),
               ],

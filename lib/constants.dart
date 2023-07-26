@@ -13,3 +13,6 @@ const kMainFormHeaderStyle =
 
 const kFormLabelStyle =
     TextStyle(color: Colors.black, fontSize: 15, fontWeight: FontWeight.w500);
+
+const kFormLabelTextStyle =
+    TextStyle(color: Colors.black54, fontSize: 13, fontWeight: FontWeight.w500);
