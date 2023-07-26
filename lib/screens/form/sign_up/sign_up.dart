@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:yummy_mobile/constants.dart';
+import 'package:yummy_mobile/screens/form/sign_up/widgets.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -36,41 +37,22 @@ class _SignUpState extends State<SignUp> {
                     child:
                         Image.asset('assets/images/product_icon/logo_sub.png')),
                 const SizedBox(height: 20),
-                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  const Text('Sign Up', style: kMainFormHeaderStyle),
-                  const Text(
-                    'Kindly create your account',
-                    style: kSubTextStyle,
-                  ),
-                  const SizedBox(height: 20),
-                  const Text(
-                    'Email',
-                    style: kFormLabelStyle,
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Container(
-                      height: 50,
-                      width: double.infinity,
-                      alignment: Alignment.centerLeft,
-                      decoration: BoxDecoration(
-                          color: Colors.white10,
-                          borderRadius: BorderRadius.circular(5),
-                          border: Border.all(color: kSecondaryColor)),
-                      child: const TextField(
-                        keyboardType: TextInputType.emailAddress,
-                        style: TextStyle(
-                          color: Colors.white,
-                        ),
-                        decoration: InputDecoration(
-                            border: InputBorder.none,
-                            contentPadding: EdgeInsets.only(top: 14.0),
-                            prefixIcon: Icon(Icons.email, color: Colors.black),
-                            hintText: 'Enter your Email',
-                            hintStyle: kFormLabelTextStyle),
-                      ))
-                ]),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Text('Sign Up', style: kMainFormHeaderStyle),
+                    const Text(
+                      'Kindy create your account',
+                      style: kSubTextStyle,
+                    ),
+                    const SizedBox(height: 20),
+                    UserLabel,
+                    const SizedBox(height: 10),
+                    EmailLabel,
+                    const SizedBox(height: 10),
+                    PasswordLabel,
+                  ],
+                ),
               ],
             ),
           ),
