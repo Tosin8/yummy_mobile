@@ -17,7 +17,10 @@ class _SignUpState extends State<SignUp> {
     return Scaffold(
       body: Stack(
         children: [
-          
+          Container(
+          height:  double.infinity, 
+          width: double.infinity, 
+          ), 
         ],
       )
     );
