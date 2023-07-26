@@ -56,11 +56,18 @@ class _SignUpState extends State<SignUp> {
                     const SizedBox(height: 10),
                     PhoneLabel,
                     const SizedBox(height: 10),
-                    const Row(
+                    Row(
                       children: [
                         Icon(Icons.add_box),
                         SizedBox(width: 10),
-                        Text('I have read the terms and conditions')
+                        GestureDetector(
+                            onTap: () {
+                              print('Tapped');
+                            },
+                            child: const Text(
+                              'I have read the terms and conditions',
+                              style: kFormLabelTextStyle,
+                            ))
                       ],
                     )
                   ],
