@@ -19,7 +19,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     Future.delayed(
-      const Duration(seconds: 10),
+      const Duration(seconds: 30),
       () {
         Navigator.push(
           context,
@@ -40,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
           color: kPrimaryColor,
         ),
         child: Center(
-          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          child: Column(children: [
             SizedBox(
               height: w / 2.75,
               width: w / 4,
@@ -52,7 +52,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 builder: (context, animatorState, child) => Column(
                   children: [
                     SizedBox(
-                      height: animatorState.value * 5,
+                      height: animatorState.value * 2,
                     ),
                     Image.asset('assets/images/product_icon/logo_main.png'),
                   ],
