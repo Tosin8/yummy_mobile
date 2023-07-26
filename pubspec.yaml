@@ -31,15 +31,15 @@ flutter:
 
   uses-material-design: true
 
-assets:
+  assets:
   
-  - assets/images/pancake_berry_1.jpg
-  - assets/images/cake_berry.jpg
-  - assets/images/pancake_berry.jpg
-  - assets/images/sandwish.jpg
-  - assets/images/spaghetti.jpg
-  - assets/images/strawberry.jpg
-  - assets/images/logo.png
+    - assets/images/pancake_berry_1.jpg
+    - assets/images/cake_berry.jpg
+    - assets/images/pancake_berry.jpg
+    - assets/images/sandwish.jpg
+    - assets/images/spaghetti.jpg
+    - assets/images/strawberry.jpg
+    - assets/images/logo.png
 
 
  
