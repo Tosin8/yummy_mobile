@@ -32,7 +32,7 @@ class _SignUpState extends State<SignUp> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Padding(
-                    padding: const EdgeInsets.only(left: 130),
+                    padding: const EdgeInsets.only(left: 40),
                     child:
                         Image.asset('assets/images/product_icon/logo_sub.png')),
                 const SizedBox(height: 20),
@@ -51,8 +51,19 @@ class _SignUpState extends State<SignUp> {
                     height: 10,
                   ),
                   Container(
-                    alignment: Alignment.centerLeft,
-                  )
+                      height: 50,
+                      width: double.infinity,
+                      alignment: Alignment.centerLeft,
+                      decoration: BoxDecoration(
+                          color: Colors.white10,
+                          borderRadius: BorderRadius.circular(5),
+                          border: Border.all(color: kSecondaryColor)),
+                      child: TextField(
+                        keyboardType: TextInputType.emailAddress,
+                        style: TextStyle(
+                          color: Colors.white,
+                        ),
+                      ))
                 ]),
               ],
             ),
