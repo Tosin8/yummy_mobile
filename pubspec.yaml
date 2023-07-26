@@ -33,14 +33,17 @@ flutter:
 
   assets:
   
-    - assets/images/pancake_berry_1.jpg
-    - assets/images/cake_berry.jpg
-    - assets/images/pancake_berry.jpg
-    - assets/images/sandwish.jpg
-    - assets/images/spaghetti.jpg
-    - assets/images/strawberry.jpg
-    - assets/images/logo_main.png
-    - assets/images/logo_sub.png
+    - assets/images/splash/pancake_berry_1.jpg
+    - assets/images/splash/cake_berry.jpg
+    - assets/images/splash/pancake_berry.jpg
+    - assets/images/splash/sandwish.jpg
+    - assets/images/splash/spaghetti.jpg
+    - assets/images/splash/strawberry.jpg
+    - assets/images/product_icon/logo_main.png
+    - assets/images/product_icon/logo_sub.png
+    - assets/images/social_media/facebook.png
+    - assets/images/social_media/gmail.png
+    - assets/images/social_media/instagram.svg
 
 
  
