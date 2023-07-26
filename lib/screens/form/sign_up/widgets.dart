@@ -157,7 +157,7 @@ var PhoneLabel =
             border: InputBorder.none,
             contentPadding: EdgeInsets.only(top: 14.0),
             prefixIcon: Icon(Icons.phone, color: Colors.black),
-            hintText: 'Enter your Phone Numbee',
+            hintText: 'Enter your Phone Number',
             hintStyle: kFormLabelTextStyle),
       ))
 ]);
