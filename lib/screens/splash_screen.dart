@@ -35,12 +35,16 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
+      body: TweenAnimationBuilder(
         decoration: const BoxDecoration(
           color: kPrimaryColor,
         ),
         child: Center(
-          child: Image.asset('assets/images/logo.png'),
+          child: Image.asset(
+            'assets/images/logo.png',
+            height: 800,
+            width: 800,
+          ),
         ),
       ),
     );
