@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import '../constants.dart';
 import 'package:lottie/lottie.dart';
 
+import 'form/sign_up/sign_up.dart';
 import 'welcome_page.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -19,12 +20,12 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     Future.delayed(
-      const Duration(seconds: 30),
+      const Duration(seconds: 20),
       () {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const WelcomePage(),
+            builder: (context) => const SignUp(),
           ),
         );
       },
