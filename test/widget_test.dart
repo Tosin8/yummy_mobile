@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:yummy_mobile/screens/log_in/login_in.dart';
+import 'package:yummy_mobile/screens/form/log_in/login_in.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
