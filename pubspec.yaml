@@ -38,6 +38,7 @@ flutter:
     - assets/images/social_media/facebook.png
     - assets/images/social_media/gmail.png
     - assets/images/social_media/instagram.svg
+    - assets/icons/animation_lkjzljaq.json
   # fonts:
   #   - family: Schyler
   #     fonts:

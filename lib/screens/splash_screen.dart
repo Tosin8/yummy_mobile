@@ -40,14 +40,15 @@ class _SplashScreenState extends State<SplashScreen> {
           color: kPrimaryColor,
         ),
         child: Center(
-          child: Column(children: [
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             Image.asset(
-              'assets/images/logo_main.png',
-              height: 140,
+              'assets/images/product_icon/logo_main.png',
+              height: 150,
               width: 150,
             ),
-            Lottie.network(
-                'htps://https://lottiefiles.com/animations/loading-p2DXATBOFS'),
+            const SizedBox(height: 80),
+            Lottie.asset('assets/icons/animation_lkjzljaq.json',
+                height: 70, repeat: true, reverse: true, animate: true),
           ]),
         ),
       ),
