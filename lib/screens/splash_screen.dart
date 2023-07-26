@@ -41,16 +41,22 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
         child: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Container(
+            SizedBox(
               height: w / 2.75,
               width: w / 4,
               child: Animator<double>(
-                duration: const Duration(milliseconds: 2000), 
+                duration: const Duration(milliseconds: 2000),
                 cycles: 0,
-                curve: Curves.easeInOut, 
-                builder: builder)
-              child: Image.asset(
-                'assets/images/product_icon/logo_main.png',
+                curve: Curves.easeInOut,
+                tween: Tween<double>(begin: 0.0, end: 10.0),
+                builder: (context, animatorState, child) => Column(
+                  children: [
+                    SizedBox(
+                      height: animatorState.value * 5,
+                    ),
+                    Image.asset('assets/images/product_icon/logo_main.png'),
+                  ],
+                ),
               ),
             ),
             const SizedBox(height: 100),
