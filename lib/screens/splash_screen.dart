@@ -40,10 +40,13 @@ class _SplashScreenState extends State<SplashScreen> {
           color: kPrimaryColor,
         ),
         child: Center(
-          child: Image.asset(
-            'assets/images/logo.png',
-            height: 800,
-            width: 800,
+          child: TweenAnimationBuilder(
+            
+            child: Image.asset(
+              'assets/images/logo.png',
+              height: 800,
+              width: 800,
+            ),
           ),
         ),
       ),
