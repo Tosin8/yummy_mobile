@@ -39,14 +39,7 @@ class _SignUpState extends State<SignUp> {
                 const Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
-                        'Sign Up',
-                        style: TextStyle(
-                          color: kPrimaryColor,
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
+                      Text('Sign Up', style: kMainFormHeaderStyle),
                       Text(
                         'Kindly create your account',
                         style: kSubTextStyle,

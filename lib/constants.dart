@@ -7,3 +7,6 @@ const kBkgColor = Color(0xFFFFFAFA);
 
 const kSubTextStyle =
     TextStyle(color: Colors.black, fontSize: 15, fontWeight: FontWeight.w400);
+
+const kMainFormHeaderStyle =
+    TextStyle(color: kPrimaryColor, fontSize: 20, fontWeight: FontWeight.bold);
