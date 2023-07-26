@@ -36,15 +36,24 @@ class _SignUpState extends State<SignUp> {
                     child:
                         Image.asset('assets/images/product_icon/logo_sub.png')),
                 const SizedBox(height: 20),
-                const Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Sign Up', style: kMainFormHeaderStyle),
-                      Text(
-                        'Kindly create your account',
-                        style: kSubTextStyle,
-                      )
-                    ]),
+                Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  const Text('Sign Up', style: kMainFormHeaderStyle),
+                  const Text(
+                    'Kindly create your account',
+                    style: kSubTextStyle,
+                  ),
+                  const SizedBox(height: 20),
+                  const Text(
+                    'Email',
+                    style: kFormLabelStyle,
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                  )
+                ]),
               ],
             ),
           ),
