@@ -58,8 +58,16 @@ class _SignUpState extends State<SignUp> {
                     const SizedBox(height: 10),
                     Row(
                       children: [
-                        Icon(Icons.add_box),
-                        SizedBox(width: 10),
+                        Theme(
+                            data:
+                                ThemeData(unselectedWidgetColor: Colors.white),
+                            child: Checkbox(
+                              value: false,
+                              checkColor: Colors.green,
+                              activeColor: Colors.white,
+                              onChanged: (value) {},
+                            )),
+                        const SizedBox(width: 10),
                         GestureDetector(
                             onTap: () {
                               print('Tapped');
@@ -67,7 +75,8 @@ class _SignUpState extends State<SignUp> {
                             child: const Text(
                               'I have read the terms and conditions',
                               style: kFormLabelTextStyle,
-                            ))
+                            )),
+                        const SizedBox(height: 10),
                       ],
                     )
                   ],
