@@ -13,29 +13,29 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  @override
-  void initState() {
-    super.initState();
+  //@override
+  // void initState() {
+  //   super.initState();
 
-    Future.delayed(
-      const Duration(seconds: 15),
-      () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const WelcomePage(),
-          ),
-        );
-      },
-    );
-  }
+  //   Future.delayed(
+  //     const Duration(seconds: 15),
+  //     () {
+  //       Navigator.push(
+  //         context,
+  //         MaterialPageRoute(
+  //           builder: (context) => const WelcomePage(),
+  //         ),
+  //       );
+  //     },
+  //   );
+  // }
 
   // TODO: making the text to fade in, then bounce up and down before moving to the next page, also adding responsive page elements.
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: TweenAnimationBuilder(
+      body: Container(
         decoration: const BoxDecoration(
           color: kPrimaryColor,
         ),
