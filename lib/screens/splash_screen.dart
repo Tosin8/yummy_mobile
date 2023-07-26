@@ -1,3 +1,4 @@
+import 'package:animator/animator.dart';
 import 'package:flutter/material.dart';
 
 import '../constants.dart';
@@ -30,8 +31,6 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 
-  // TODO: making the text to fade in, then bounce up and down before moving to the next page, also adding responsive page elements.
-
   @override
   Widget build(BuildContext context) {
     double w = MediaQuery.of(context).size.width;
@@ -42,10 +41,17 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
         child: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-            Image.asset(
-              'assets/images/product_icon/logo_main.png',
-              height: 150,
-              width: 150,
+            Container(
+              height: w / 2.75,
+              width: w / 4,
+              child: Animator<double>(
+                duration: const Duration(milliseconds: 2000), 
+                cycles: 0,
+                curve: Curves.easeInOut, 
+                builder: builder)
+              child: Image.asset(
+                'assets/images/product_icon/logo_main.png',
+              ),
             ),
             const SizedBox(height: 100),
             Lottie.asset('assets/icons/animation_lkjzljaq.json',
