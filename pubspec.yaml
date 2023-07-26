@@ -39,7 +39,8 @@ flutter:
     - assets/images/sandwish.jpg
     - assets/images/spaghetti.jpg
     - assets/images/strawberry.jpg
-    - assets/images/logo.png
+    - assets/images/logo_main.png
+    - assets/images/logo_sub.png
 
 
  

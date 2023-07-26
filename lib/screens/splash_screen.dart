@@ -32,11 +32,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   // TODO: making the text to fade in, then bounce up and down before moving to the next page, also adding responsive page elements.
 
-  double initial_height = 300.0;
-  double initial_width = 300.0;
-  double target_height = 400.0;
-  double target_width = 400.0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,12 +40,10 @@ class _SplashScreenState extends State<SplashScreen> {
           color: kPrimaryColor,
         ),
         child: Center(
-          child: TweenAnimationBuilder(
-            child: Image.asset(
-              'assets/images/logo.png',
-              height: 800,
-              width: 800,
-            ),
+          child: Image.asset(
+            'assets/images/logo_main.png',
+            height: 140,
+            width: 150,
           ),
         ),
       ),
