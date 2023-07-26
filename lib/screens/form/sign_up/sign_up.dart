@@ -22,14 +22,40 @@ class _SignUpState extends State<SignUp> {
             )),
         Container(
           height: double.infinity,
-          child: const SingleChildScrollView(
-            physics: AlwaysScrollableScrollPhysics(),
-            padding: EdgeInsets.symmetric(
+          child: SingleChildScrollView(
+            physics: const AlwaysScrollableScrollPhysics(),
+            padding: const EdgeInsets.symmetric(
               horizontal: 40.0,
-              vertical: 120.0,
+              vertical: 40.0,
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                    padding: const EdgeInsets.only(left: 130),
+                    child:
+                        Image.asset('assets/images/product_icon/logo_sub.png')),
+                const SizedBox(height: 20),
+                const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Sign Up',
+                        style: TextStyle(
+                          color: kPrimaryColor,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        'Kindly create your account',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w400),
+                      )
+                    ]),
+              ],
             ),
           ),
         )
