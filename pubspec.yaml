@@ -1,9 +1,7 @@
 name: yummy_mobile
-description: A delivery service food order for customers. 
+description: A delivery service food order for customers.
 
-
-publish_to: 'none' 
-
+publish_to: 'none'
 
 version: 1.0.0+1
 
@@ -11,28 +9,24 @@ environment:
   sdk: ">=2.16.2 <3.0.0"
 
 dependencies:
+  cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
-
-
-  cupertino_icons: ^1.0.2
   font_awesome_flutter: ^10.1.0
-
-  
+  lottie: ^2.5.0
 
 dev_dependencies:
+
+  flutter_lints: ^1.0.0
   flutter_test:
     sdk: flutter
-
-  
-  flutter_lints: ^1.0.0
 
 flutter:
 
   uses-material-design: true
 
   assets:
-  
+
     - assets/images/splash/pancake_berry_1.jpg
     - assets/images/splash/cake_berry.jpg
     - assets/images/splash/pancake_berry.jpg
@@ -44,9 +38,6 @@ flutter:
     - assets/images/social_media/facebook.png
     - assets/images/social_media/gmail.png
     - assets/images/social_media/instagram.svg
-
-
- 
   # fonts:
   #   - family: Schyler
   #     fonts:
@@ -58,4 +49,3 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
-  

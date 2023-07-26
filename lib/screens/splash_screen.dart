@@ -40,10 +40,12 @@ class _SplashScreenState extends State<SplashScreen> {
           color: kPrimaryColor,
         ),
         child: Center(
-          child: Image.asset(
-            'assets/images/logo_main.png',
-            height: 140,
-            width: 150,
+          child: Column(
+            children:[ Image.asset(
+              'assets/images/logo_main.png',
+              height: 140,
+              width: 150,
+            ),
           ),
         ),
       ),
