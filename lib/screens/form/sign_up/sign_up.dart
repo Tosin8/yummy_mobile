@@ -49,10 +49,7 @@ class _SignUpState extends State<SignUp> {
                       ),
                       Text(
                         'Kindly create your account',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 15,
-                            fontWeight: FontWeight.w400),
+                        style: kSubTextStyle,
                       )
                     ]),
               ],
