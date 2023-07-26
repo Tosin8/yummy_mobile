@@ -35,6 +35,7 @@ flutter:
     - assets/images/splash/strawberry.jpg
     - assets/images/product_icon/logo_main.png
     - assets/images/product_icon/logo_sub.png
+    - assets/images/product_icon/logo_medium.png
     - assets/images/social_media/facebook.png
     - assets/images/social_media/gmail.png
     - assets/images/social_media/instagram.svg
