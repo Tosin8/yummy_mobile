@@ -14,7 +14,13 @@ class OTP extends StatelessWidget {
             width: 68,
             child: TextFormField(
               autofocus: true,
-              onSaved: (pin1) {},
+              onSaved: (pin3) {},
+              onChanged: (value) => {
+                if (value.length == 1)
+                  {
+                    FocusScope.of(context).nextFocus(),
+                  }
+              },
               keyboardType: TextInputType.number,
               maxLength: 1,
               decoration: const InputDecoration(counterText: ""),
@@ -27,7 +33,12 @@ class OTP extends StatelessWidget {
             width: 68,
             child: TextFormField(
               autofocus: true,
-              onSaved: (pin1) {},
+              onSaved: (pin4) {},
+              onChanged: (value) {
+                if (value.length == 1) {
+                  FocusScope.of(context).nextFocus();
+                }
+              },
               keyboardType: TextInputType.number,
               maxLength: 1,
               decoration: const InputDecoration(counterText: ""),
