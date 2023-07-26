@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:yummy_mobile/screens/welcome_page.dart';
 
 import 'dart:async';
 
 import '../constants.dart';
+import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -40,13 +40,15 @@ class _SplashScreenState extends State<SplashScreen> {
           color: kPrimaryColor,
         ),
         child: Center(
-          child: Column(
-            children:[ Image.asset(
+          child: Column(children: [
+            Image.asset(
               'assets/images/logo_main.png',
               height: 140,
               width: 150,
             ),
-          ),
+            Lottie.network(
+                'htps://https://lottiefiles.com/animations/loading-p2DXATBOFS'),
+          ]),
         ),
       ),
     );
