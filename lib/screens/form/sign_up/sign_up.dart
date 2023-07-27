@@ -86,10 +86,17 @@ class _SignUpState extends State<SignUp> {
                       child: Container(
                         width: 200,
                         height: 55,
-                        padding: const EdgeInsets.symmetric(vertical: 25.0),
+                        padding: const EdgeInsets.symmetric(vertical: 16.0),
                         decoration: BoxDecoration(
                             color: kPrimaryColor,
                             borderRadius: BorderRadius.circular(10)),
+                        child: const Text(
+                          'Create Account',
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
                     )
                   ],
