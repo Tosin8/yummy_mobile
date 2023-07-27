@@ -3,37 +3,6 @@ import 'package:flutter/material.dart';
 import '../../../constants.dart';
 
 // ignore: non_constant_identifier_names
-var UserLabel = Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-  const Text(
-    'Name',
-    style: kFormLabelStyle,
-  ),
-  const SizedBox(
-    height: 6,
-  ),
-  Container(
-      height: 50,
-      width: double.infinity,
-      alignment: Alignment.centerLeft,
-      decoration: BoxDecoration(
-          color: Colors.white10,
-          borderRadius: BorderRadius.circular(5),
-          border: Border.all(color: kSecondaryColor)),
-      child: const TextField(
-        keyboardType: TextInputType.name,
-        style: TextStyle(
-          color: Colors.black26,
-        ),
-        decoration: InputDecoration(
-            border: InputBorder.none,
-            contentPadding: EdgeInsets.only(top: 14.0),
-            prefixIcon: Icon(Icons.account_circle, color: Colors.black),
-            hintText: 'Enter your name',
-            hintStyle: kFormLabelTextStyle),
-      ))
-]);
-
-// ignore: non_constant_identifier_names
 var EmailLabel =
     Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
   const Text(

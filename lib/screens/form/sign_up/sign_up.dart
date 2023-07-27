@@ -11,6 +11,7 @@ class SignUp extends StatefulWidget {
 }
 
 class _SignUpState extends State<SignUp> {
+  bool _agreed = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,8 +46,6 @@ class _SignUpState extends State<SignUp> {
                       'Kindy create your account',
                       style: kSubTextStyle,
                     ),
-                    const SizedBox(height: 20),
-                    UserLabel,
                     const SizedBox(height: 10),
                     EmailLabel,
                     const SizedBox(height: 10),
@@ -56,35 +55,49 @@ class _SignUpState extends State<SignUp> {
                     const SizedBox(height: 10),
                     PhoneLabel,
                     const SizedBox(height: 10),
-                    Row(
-                      children: [
-                        Theme(
-                            data:
-                                ThemeData(unselectedWidgetColor: Colors.white),
-                            child: Checkbox(
-                              value: false,
-                              checkColor: Colors.green,
-                              activeColor: Colors.white,
-                              onChanged: (value) {},
-                            )),
-                        const SizedBox(width: 10),
-                        GestureDetector(
-                            onTap: () {
-                              print('Tapped');
+                    Row(children: [
+                      Theme(
+                          data: ThemeData(unselectedWidgetColor: Colors.white),
+                          child: Checkbox(
+                            value: false,
+                            checkColor: Colors.blue,
+                            activeColor: kSecondaryColor,
+                            onChanged: (value) {
+                              setState(() {
+                                _agreed = value!;
+                              });
                             },
-                            child: const Text(
-                              'I have read the terms and conditions',
-                              style: kFormLabelTextStyle,
-                            )),
-                        const SizedBox(height: 10),
-                      ],
+                          )),
+                      const SizedBox(width: 5),
+                      GestureDetector(
+                          onTap: () {
+                            print('Tapped');
+                          },
+                          child: const Text(
+                            'I have read the terms and conditions',
+                            style: kFormLabelTextStyle,
+                          )),
+                    ]),
+                    const SizedBox(height: 10),
+                    GestureDetector(
+                      onTap: () {
+                        print('submit button has been tapped');
+                      },
+                      child: Container(
+                        width: 200,
+                        height: 55,
+                        padding: const EdgeInsets.symmetric(vertical: 25.0),
+                        decoration: BoxDecoration(
+                            color: kPrimaryColor,
+                            borderRadius: BorderRadius.circular(10)),
+                      ),
                     )
                   ],
-                ),
+                )
               ],
             ),
           ),
-        )
+        ),
       ]),
     );
   }
