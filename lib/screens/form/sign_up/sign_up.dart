@@ -110,7 +110,11 @@ class _SignUpState extends State<SignUp> {
                         Column(
                           children: [
                             Image.asset(
-                                'assets/images/social_media/facebook.png'),
+                              'assets/images/social_media/facebook.png',
+                              height: 30,
+                              width: 30,
+                              fit: BoxFit.fitWidth,
+                            ),
                             const Text(
                               'Facebook',
                               style:
@@ -120,7 +124,12 @@ class _SignUpState extends State<SignUp> {
                         ),
                         Column(
                           children: [
-                            Image.asset('assets/images/social_media/gmail.png'),
+                            Image.asset(
+                              'assets/images/social_media/gmail.png',
+                              width: 30,
+                              height: 30,
+                              fit: BoxFit.fitWidth,
+                            ),
                             const Text(
                               'Gmail',
                               style:
@@ -131,7 +140,11 @@ class _SignUpState extends State<SignUp> {
                         Column(
                           children: [
                             Image.asset(
-                                'assets/images/social_media/instagram.svg'),
+                              'assets/images/social_media/instagram.svg',
+                              width: 30,
+                              height: 30,
+                              fit: BoxFit.fitWidth,
+                            ),
                             const Text(
                               'Instagram',
                               style:
@@ -140,7 +153,7 @@ class _SignUpState extends State<SignUp> {
                           ],
                         ),
                       ],
-                    )
+                    ),
                   ],
                 )
               ],
