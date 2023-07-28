@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:yummy_mobile/constants.dart';
 import 'package:yummy_mobile/screens/form/forgot_pass.dart';
+import 'package:yummy_mobile/screens/form/sign_up/sign_up.dart';
 
 import 'package:yummy_mobile/screens/form/sign_up/widgets.dart';
 
@@ -118,7 +119,8 @@ class _LogInState extends State<LogIn> {
                         const SizedBox(width: 7),
                         GestureDetector(
                           onTap: () {
-                            Navigator.of(context).pop();
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => const SignUp()));
                           },
                           child: const Text('Sign Up',
                               style: TextStyle(

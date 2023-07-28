@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
+import 'log_in/login_in.dart';
 import 'log_in/widgets.dart';
 
 class ForgottenPassword extends StatefulWidget {
@@ -52,7 +53,7 @@ class _ForgottenPasswordState extends State<ForgottenPassword> {
                           const SizedBox(height: 30),
                           GestureDetector(
                             onTap: () {
-                              print('submit button has been tapped');
+                              print('button has been tapped');
                             },
                             child: Center(
                               child: Container(
@@ -75,6 +76,25 @@ class _ForgottenPasswordState extends State<ForgottenPassword> {
                               ),
                             ),
                           ),
+                          const SizedBox(height: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text('Login to account',
+                                  style: kSubTextStyle),
+                              const SizedBox(width: 7),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).pop();
+                                },
+                                child: const Text('Sign In',
+                                    style: TextStyle(
+                                        color: kSecondaryColor,
+                                        fontSize: 15,
+                                        fontWeight: FontWeight.w500)),
+                              ),
+                            ],
+                          )
                         ])
                   ])))
     ]));
