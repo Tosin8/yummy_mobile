@@ -28,7 +28,7 @@ var EmailLabel =
         decoration: InputDecoration(
             border: InputBorder.none,
             contentPadding: EdgeInsets.only(top: 14.0),
-            prefixIcon: Icon(Icons.account_circle, color: Colors.black),
+            prefixIcon: Icon(Icons.email, color: Colors.black),
             hintText: 'Enter your Email',
             hintStyle: kFormLabelTextStyle),
       ))

@@ -140,7 +140,7 @@ class _SignUpState extends State<SignUp> {
                         Column(
                           children: [
                             Image.asset(
-                              'assets/images/social_media/instagram.svg',
+                              'assets/images/social_media/instagram.png',
                               width: 30,
                               height: 30,
                               fit: BoxFit.fitWidth,
@@ -154,6 +154,12 @@ class _SignUpState extends State<SignUp> {
                         ),
                       ],
                     ),
+                    const Row(
+                      children: [
+                        Text('Already have an account', style: kSubTextStyle),
+                        Text('Log In', style: kFormLabelTextStyle),
+                      ],
+                    )
                   ],
                 )
               ],
