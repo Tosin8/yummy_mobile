@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:yummy_mobile/constants.dart';
+import 'package:yummy_mobile/screens/form/forgot_pass.dart';
 import 'package:yummy_mobile/screens/form/sign_up/sign_up.dart';
 import 'package:yummy_mobile/screens/form/sign_up/widgets.dart';
 
@@ -43,6 +44,7 @@ class _LogInState extends State<LogIn> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Text('Sign In', style: kMainFormHeaderStyle),
+                    const SizedBox(height: 5),
                     const Text(
                       'Kindy login into your account',
                       style: kSubTextStyle,
@@ -51,7 +53,7 @@ class _LogInState extends State<LogIn> {
                     EmailLabel,
                     const SizedBox(height: 10),
                     PasswordLabel,
-                    const SizedBox(height: 10),
+                    const SizedBox(height: 20),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -70,7 +72,7 @@ class _LogInState extends State<LogIn> {
                                   borderRadius: BorderRadius.circular(10)),
                               child: const Center(
                                 child: Text(
-                                  'Create Account',
+                                  'Log In',
                                   style: TextStyle(
                                       color: Colors.white,
                                       fontSize: 18,
@@ -80,15 +82,35 @@ class _LogInState extends State<LogIn> {
                             ),
                           ),
                         ),
-                        Image.asset('assets/icons/fingerprint.png')
+                        const SizedBox(width: 10),
+                        Image.asset(
+                          'assets/icons/fingerprint.png',
+                          width: 30,
+                          height: 30,
+                          fit: BoxFit.fitWidth,
+                        )
                       ],
                     ),
                     const SizedBox(height: 10),
                     const Center(child: Text('- OR -', style: kSubTextStyle)),
                     const SizedBox(height: 10),
                     const Social_Media_Buttons(),
-                    const SizedBox(height: 10),
-                    const Text('Forgot My Login Details'),
+                    const SizedBox(height: 20),
+                    Center(
+                      child: GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) =>
+                                    const ForgottenPassword()));
+                          },
+                          child: const Text(
+                            'Forgot My Login Details',
+                            style: TextStyle(
+                                color: kPrimaryColor,
+                                fontWeight: FontWeight.w500),
+                          )),
+                    ),
+                    const SizedBox(height: 20),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -96,8 +118,7 @@ class _LogInState extends State<LogIn> {
                         const SizedBox(width: 7),
                         GestureDetector(
                           onTap: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => const SignUp()));
+                            Navigator.of(context).pop();
                           },
                           child: const Text('Sign Up',
                               style: TextStyle(
