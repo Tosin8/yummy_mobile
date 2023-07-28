@@ -67,3 +67,80 @@ var PasswordLabel =
             hintStyle: kFormLabelTextStyle),
       ))
 ]);
+
+class Social_Media_Buttons extends StatelessWidget {
+  const Social_Media_Buttons({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        GestureDetector(
+          onTap: () {
+            print('Facebook tapped');
+          },
+          child: Column(
+            children: [
+              Image.asset(
+                'assets/images/social_media/facebook.png',
+                height: 30,
+                width: 30,
+                fit: BoxFit.fitWidth,
+              ),
+              const SizedBox(height: 5),
+              const Text(
+                'Facebook',
+                style: TextStyle(color: Colors.black, fontSize: 9),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(width: 15),
+        GestureDetector(
+          onTap: () {
+            print('Gmail tapped');
+          },
+          child: Column(
+            children: [
+              Image.asset(
+                'assets/images/social_media/gmail.png',
+                width: 30,
+                height: 30,
+                fit: BoxFit.fitWidth,
+              ),
+              const SizedBox(height: 5),
+              const Text(
+                'Gmail',
+                style: TextStyle(color: Colors.black, fontSize: 9),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(width: 15),
+        GestureDetector(
+          onTap: () {
+            print('Instagram tapped');
+          },
+          child: Column(
+            children: [
+              Image.asset(
+                'assets/images/social_media/instagram.png',
+                width: 30,
+                height: 30,
+                fit: BoxFit.fitWidth,
+              ),
+              const SizedBox(height: 5),
+              const Text(
+                'Instagram',
+                style: TextStyle(color: Colors.black, fontSize: 9),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+}

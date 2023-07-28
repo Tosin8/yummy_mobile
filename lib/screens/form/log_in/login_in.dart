@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:yummy_mobile/constants.dart';
+import 'package:yummy_mobile/screens/form/sign_up/sign_up.dart';
 import 'package:yummy_mobile/screens/form/sign_up/widgets.dart';
 
 class LogIn extends StatefulWidget {
@@ -51,6 +52,61 @@ class _LogInState extends State<LogIn> {
                     const SizedBox(height: 10),
                     PasswordLabel,
                     const SizedBox(height: 10),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        GestureDetector(
+                          onTap: () {
+                            print('submit button has been tapped');
+                          },
+                          child: Center(
+                            child: Container(
+                              width: 200,
+                              height: 45,
+                              padding:
+                                  const EdgeInsets.symmetric(vertical: 12.0),
+                              decoration: BoxDecoration(
+                                  color: kPrimaryColor,
+                                  borderRadius: BorderRadius.circular(10)),
+                              child: const Center(
+                                child: Text(
+                                  'Create Account',
+                                  style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Image.asset('assets/icons/fingerprint.png')
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    const Center(child: Text('- OR -', style: kSubTextStyle)),
+                    const SizedBox(height: 10),
+                    const Social_Media_Buttons(),
+                    const SizedBox(height: 10),
+                    const Text('Forgot My Login Details'),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text('Create an account', style: kSubTextStyle),
+                        const SizedBox(width: 7),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => const SignUp()));
+                          },
+                          child: const Text('Sign Up',
+                              style: TextStyle(
+                                  color: kSecondaryColor,
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.w500)),
+                        ),
+                      ],
+                    )
                   ],
                 )
               ],

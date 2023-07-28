@@ -41,6 +41,7 @@ flutter:
     - assets/images/social_media/gmail.png
     - assets/images/social_media/instagram.png
     - assets/icons/animation_lkjzljaq.json
+    - assets/icons/fingerprint.png
   # fonts:
   #   - family: Schyler
   #     fonts:
