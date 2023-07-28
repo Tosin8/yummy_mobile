@@ -104,7 +104,43 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    Text('- OR -', style: kSubTextStyle)
+                    Text('- OR -', style: kSubTextStyle),
+                    Row(
+                      children: [
+                        Column(
+                          children: [
+                            Image.asset(
+                                'assets/images/social_media/facebook.png'),
+                            const Text(
+                              'Facebook',
+                              style:
+                                  TextStyle(color: Colors.black12, fontSize: 8),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Image.asset('assets/images/social_media/gmail.png'),
+                            const Text(
+                              'Gmail',
+                              style:
+                                  TextStyle(color: Colors.black12, fontSize: 8),
+                            ),
+                          ],
+                        ),
+                        Column(
+                          children: [
+                            Image.asset(
+                                'assets/images/social_media/instagram.svg'),
+                            const Text(
+                              'Instagram',
+                              style:
+                                  TextStyle(color: Colors.black12, fontSize: 8),
+                            ),
+                          ],
+                        ),
+                      ],
+                    )
                   ],
                 )
               ],
