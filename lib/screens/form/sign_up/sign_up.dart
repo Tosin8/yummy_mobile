@@ -86,8 +86,8 @@ class _SignUpState extends State<SignUp> {
                       child: Center(
                         child: Container(
                           width: 200,
-                          height: 55,
-                          padding: const EdgeInsets.symmetric(vertical: 16.0),
+                          height: 45,
+                          padding: const EdgeInsets.symmetric(vertical: 12.0),
                           decoration: BoxDecoration(
                               color: kPrimaryColor,
                               borderRadius: BorderRadius.circular(10)),
@@ -104,8 +104,10 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    Text('- OR -', style: kSubTextStyle),
+                    Center(child: Text('- OR -', style: kSubTextStyle)),
+                    const SizedBox(height: 10),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Column(
                           children: [
@@ -115,13 +117,15 @@ class _SignUpState extends State<SignUp> {
                               width: 30,
                               fit: BoxFit.fitWidth,
                             ),
+                            const SizedBox(height: 5),
                             const Text(
                               'Facebook',
                               style:
-                                  TextStyle(color: Colors.black12, fontSize: 8),
+                                  TextStyle(color: Colors.black, fontSize: 9),
                             ),
                           ],
                         ),
+                        const SizedBox(width: 15),
                         Column(
                           children: [
                             Image.asset(
@@ -130,13 +134,15 @@ class _SignUpState extends State<SignUp> {
                               height: 30,
                               fit: BoxFit.fitWidth,
                             ),
+                            const SizedBox(height: 5),
                             const Text(
                               'Gmail',
                               style:
-                                  TextStyle(color: Colors.black12, fontSize: 8),
+                                  TextStyle(color: Colors.black, fontSize: 9),
                             ),
                           ],
                         ),
+                        const SizedBox(width: 15),
                         Column(
                           children: [
                             Image.asset(
@@ -145,19 +151,27 @@ class _SignUpState extends State<SignUp> {
                               height: 30,
                               fit: BoxFit.fitWidth,
                             ),
+                            const SizedBox(height: 5),
                             const Text(
                               'Instagram',
                               style:
-                                  TextStyle(color: Colors.black12, fontSize: 8),
+                                  TextStyle(color: Colors.black, fontSize: 9),
                             ),
                           ],
                         ),
                       ],
                     ),
+                    const SizedBox(height: 10),
                     const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Text('Already have an account', style: kSubTextStyle),
-                        Text('Log In', style: kFormLabelTextStyle),
+                        SizedBox(width: 7),
+                        Text('Log In',
+                            style: TextStyle(
+                                color: kSecondaryColor,
+                                fontSize: 15,
+                                fontWeight: FontWeight.w500)),
                       ],
                     )
                   ],
