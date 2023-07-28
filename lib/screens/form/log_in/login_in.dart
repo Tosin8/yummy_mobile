@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:yummy_mobile/constants.dart';
-
 import 'package:yummy_mobile/screens/form/sign_up/widgets.dart';
 
 class LogIn extends StatefulWidget {
@@ -39,15 +38,19 @@ class _LogInState extends State<LogIn> {
                     child:
                         Image.asset('assets/images/product_icon/logo_sub.png')),
                 const SizedBox(height: 20),
-                const Column(
+                Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('Sign Up', style: kMainFormHeaderStyle),
-                    Text(
-                      'Kindy create your account',
+                    const Text('Sign In', style: kMainFormHeaderStyle),
+                    const Text(
+                      'Kindy login into your account',
                       style: kSubTextStyle,
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
+                    EmailLabel,
+                    const SizedBox(height: 10),
+                    PasswordLabel,
+                    const SizedBox(height: 10),
                   ],
                 )
               ],
