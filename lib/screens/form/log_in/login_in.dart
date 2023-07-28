@@ -1,182 +1,60 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-import '../forgot_pass.dart';
-import '../sign_up/sign_up.dart';
+import 'package:yummy_mobile/constants.dart';
 
-class LoginIn extends StatefulWidget {
-  const LoginIn({Key? key}) : super(key: key);
+import 'package:yummy_mobile/screens/form/sign_up/widgets.dart';
+
+class LogIn extends StatefulWidget {
+  const LogIn({Key? key}) : super(key: key);
 
   @override
-  State<LoginIn> createState() => _LoginInState();
+  State<LogIn> createState() => _LogInState();
 }
 
-class _LoginInState extends State<LoginIn> {
+class _LogInState extends State<LogIn> {
+  bool _agreed = false;
   @override
   Widget build(BuildContext context) {
-    return Stack(children: [
-      ShaderMask(
-          shaderCallback: (rect) => const LinearGradient(
-                begin: Alignment.bottomCenter,
-                end: Alignment.center,
-                colors: [Colors.black, Colors.transparent],
-              ).createShader(rect),
-          blendMode: BlendMode.darken,
-          child: Container(
+    return Scaffold(
+      body: Stack(children: [
+        Container(
+            height: double.infinity,
+            width: double.infinity,
             decoration: const BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('assets/images/background.png'),
-                fit: BoxFit.cover,
-                colorFilter: ColorFilter.mode(Colors.black54, BlendMode.darken),
-              ),
+              color: kBkgColor,
+            )),
+        Container(
+          height: double.infinity,
+          child: SingleChildScrollView(
+            physics: const AlwaysScrollableScrollPhysics(),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 40.0,
+              vertical: 40.0,
             ),
-          )),
-      Scaffold(
-          backgroundColor: Colors.transparent,
-          body: Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 50),
-                child: Flexible(
-                  child: Image.asset('assets/images/logo.png'),
-                ),
-              ),
-              const SizedBox(height: 20),
-              const Text('Welcome back User',
-                  style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold)),
-              const SizedBox(height: 50),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10.0),
-                child: Container(
-                    height: 70,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[500]?.withOpacity(0.5),
-                      borderRadius: BorderRadius.circular(16),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                    padding: const EdgeInsets.only(left: 40),
+                    child:
+                        Image.asset('assets/images/product_icon/logo_sub.png')),
+                const SizedBox(height: 20),
+                const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Sign Up', style: kMainFormHeaderStyle),
+                    Text(
+                      'Kindy create your account',
+                      style: kSubTextStyle,
                     ),
-                    child: const Center(
-                        child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        prefixIcon: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 20.0),
-                          child: Icon(
-                            FontAwesomeIcons.envelope,
-                            size: 30,
-                            color: Colors.white,
-                          ),
-                        ),
-                        hintText: 'Email',
-                        hintStyle: TextStyle(fontSize: 22, color: Colors.white),
-                      ),
-                      style: TextStyle(
-                        fontSize: 22,
-                        color: Colors.white,
-                        height: 1.5,
-                      ),
-                      keyboardType: TextInputType.emailAddress,
-                      textInputAction: TextInputAction.next,
-                    ))),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 10.0),
-                child: Container(
-                    height: 70,
-                    decoration: BoxDecoration(
-                      color: Colors.grey[500]?.withOpacity(0.5),
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    child: const Center(
-                        child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        prefixIcon: Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 20.0),
-                          child: Icon(
-                            FontAwesomeIcons.lock,
-                            size: 30,
-                            color: Colors.white,
-                          ),
-                        ),
-                        hintText: 'Password',
-                        hintStyle: TextStyle(fontSize: 22, color: Colors.white),
-                      ),
-                      obscureText: true,
-                      style: TextStyle(
-                        fontSize: 22,
-                        color: Colors.white,
-                        height: 1.5,
-                      ),
-                      keyboardType: TextInputType.visiblePassword,
-                      textInputAction: TextInputAction.done,
-                    ))),
-              ),
-              GestureDetector(
-                onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ForgottenPassword(),
-                    )),
-                //Navigator.pushNamed(context, 'ForgottenPassword'),
-                child: const Padding(
-                    padding: EdgeInsets.only(left: 300),
-                    child: Text('Forgot Password')),
-              ),
-              const SizedBox(height: 25),
-              const RoundedButton(
-                buttonName: 'Login',
-              ),
-              const SizedBox(height: 25),
-              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                const Text('Create new account'),
-                TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const SignUp(),
-                          ));
-                    },
-                    child: const Text(
-                      ' Sign Up',
-                      style: TextStyle(color: Colors.lightBlueAccent),
-                    ))
-              ]),
-            ],
-          ))
-    ]);
-  }
-}
-
-class RoundedButton extends StatelessWidget {
-  const RoundedButton({
-    Key? key,
-    required this.buttonName,
-  }) : super(key: key);
-
-  final String buttonName;
-
-  @override
-  Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
-    return Container(
-      height: size.height * 0.08,
-      width: size.width * 0.8,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(16),
-        color: const Color(0xff5663ff),
-      ),
-      child: TextButton(
-          onPressed: () {},
-          child: Text(buttonName,
-              style: const TextStyle(
-                fontSize: 22,
-                color: Colors.white,
-                height: 1.5,
-                fontWeight: FontWeight.bold,
-              ))),
+                    SizedBox(height: 10),
+                  ],
+                )
+              ],
+            ),
+          ),
+        ),
+      ]),
     );
   }
 }

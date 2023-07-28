@@ -22,6 +22,7 @@ var EmailLabel =
           border: Border.all(color: kSecondaryColor)),
       child: const TextField(
         keyboardType: TextInputType.emailAddress,
+        textInputAction: TextInputAction.next,
         style: TextStyle(
           color: Colors.black26,
         ),
@@ -55,6 +56,7 @@ var PasswordLabel =
       child: const TextField(
         obscureText: true,
         keyboardType: TextInputType.visiblePassword,
+        textInputAction: TextInputAction.next,
         style: TextStyle(
           color: Colors.black26,
         ),
@@ -88,6 +90,7 @@ var RepeatPasswordLabel =
       child: const TextField(
         obscureText: true,
         keyboardType: TextInputType.visiblePassword,
+        textInputAction: TextInputAction.next,
         style: TextStyle(
           color: Colors.black26,
         ),
@@ -118,6 +121,7 @@ var PhoneLabel =
           borderRadius: BorderRadius.circular(5),
           border: Border.all(color: kSecondaryColor)),
       child: const TextField(
+        textInputAction: TextInputAction.done,
         keyboardType: TextInputType.phone,
         style: TextStyle(
           color: Colors.black26,

@@ -105,19 +105,20 @@ class _SignUpState extends State<SignUp> {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    Center(child: Text('- OR -', style: kSubTextStyle)),
+                    const Center(child: Text('- OR -', style: kSubTextStyle)),
                     const SizedBox(height: 10),
                     const Social_Media_Buttons(),
                     const SizedBox(height: 10),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('Already have an account', style: kSubTextStyle),
+                        const Text('Already have an account',
+                            style: kSubTextStyle),
                         const SizedBox(width: 7),
                         GestureDetector(
                           onTap: () {
                             Navigator.of(context).push(MaterialPageRoute(
-                                builder: (context) => LoginIn()));
+                                builder: (context) => const LogIn()));
                           },
                           child: const Text('Log In',
                               style: TextStyle(
