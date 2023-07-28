@@ -5,7 +5,6 @@ import '../constants.dart';
 import 'package:lottie/lottie.dart';
 
 import 'form/sign_up/sign_up.dart';
-import 'welcome_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
