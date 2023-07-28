@@ -83,22 +83,28 @@ class _SignUpState extends State<SignUp> {
                       onTap: () {
                         print('submit button has been tapped');
                       },
-                      child: Container(
-                        width: 200,
-                        height: 55,
-                        padding: const EdgeInsets.symmetric(vertical: 16.0),
-                        decoration: BoxDecoration(
-                            color: kPrimaryColor,
-                            borderRadius: BorderRadius.circular(10)),
-                        child: const Text(
-                          'Create Account',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold),
+                      child: Center(
+                        child: Container(
+                          width: 200,
+                          height: 55,
+                          padding: const EdgeInsets.symmetric(vertical: 16.0),
+                          decoration: BoxDecoration(
+                              color: kPrimaryColor,
+                              borderRadius: BorderRadius.circular(10)),
+                          child: const Center(
+                            child: Text(
+                              'Create Account',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
                         ),
                       ),
-                    )
+                    ),
+                    const SizedBox(height: 10),
+                    Text('- OR -', style: kSubTextStyle)
                   ],
                 )
               ],
