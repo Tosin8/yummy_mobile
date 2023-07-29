@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:yummy_mobile/screens/form/verification_page.dart';
 
 import '../../constants.dart';
-import 'log_in/login_in.dart';
+
 import 'log_in/widgets.dart';
 
 class ForgottenPassword extends StatefulWidget {
@@ -53,7 +54,8 @@ class _ForgottenPasswordState extends State<ForgottenPassword> {
                           const SizedBox(height: 30),
                           GestureDetector(
                             onTap: () {
-                              print('button has been tapped');
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (context) => const OTP()));
                             },
                             child: Center(
                               child: Container(
