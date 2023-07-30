@@ -57,10 +57,17 @@ class _HomePageState extends State<HomePage> {
                           borderRadius: BorderRadius.vertical(
                               bottom: Radius.circular(10))),
                     ),
-                    Icon(listOfIcon)
+                    Icon(listOfIcon[index],
+                        size: size.width * .076,
+                        color: index == currentIndex
+                            ? Colors.blueAccent
+                            : Colors.black38),
+                    SizedBox(height: size.width * .03),
                   ],
                 ))),
       ),
     );
   }
+
+  List<IconData> listOfIcon = [];
 }
