@@ -69,5 +69,10 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  List<IconData> listOfIcon = [];
+  List<IconData> listOfIcon = [
+    Icons.home_rounded,
+    Icons.favorite_rounded,
+    Icons.settings_rounded,
+    Icons.person_rounded,
+  ];
 }
