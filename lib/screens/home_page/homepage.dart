@@ -8,6 +8,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  var currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -26,7 +27,39 @@ class _HomePageState extends State<HomePage> {
           ],
           borderRadius: BorderRadius.circular(50),
         ),
-        child: ListView.builder(itemBuilder: itemBuilder),
+        child: ListView.builder(
+            itemCount: 4,
+            scrollDirection: Axis.horizontal,
+            padding: EdgeInsets.symmetric(horizontal: size.width * .024),
+            itemBuilder: (context, index) => InkWell(
+                onTap: () {
+                  setState(() {
+                    currentIndex = index;
+                  });
+                },
+                splashColor: Colors.transparent,
+                highlightColor: Colors.transparent,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    AnimatedContainer(
+                      duration: const Duration(milliseconds: 1500),
+                      curve: Curves.fastLinearToSlowEaseIn,
+                      margin: EdgeInsets.only(
+                        bottom: index == currentIndex ? 0 : size.width * .029,
+                        right: size.width * .0422,
+                        left: size.width * .0422,
+                      ),
+                      width: size.width * .128,
+                      height: index == currentIndex ? size.width * .014 : 0,
+                      decoration: const BoxDecoration(
+                          color: Colors.blueAccent,
+                          borderRadius: BorderRadius.vertical(
+                              bottom: Radius.circular(10))),
+                    ),
+                    Icon(listOfIcon)
+                  ],
+                ))),
       ),
     );
   }
