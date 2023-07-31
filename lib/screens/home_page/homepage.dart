@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:yummy_mobile/constants.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -17,7 +18,7 @@ class _HomePageState extends State<HomePage> {
         margin: const EdgeInsets.all(20),
         height: size.width * .155,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: kPrimaryColor,
           boxShadow: [
             BoxShadow(
               color: Colors.white.withOpacity(.15),
