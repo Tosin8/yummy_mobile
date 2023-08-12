@@ -49,6 +49,13 @@ flutter:
     - assets/images/products/salad/5.png
     - assets/images/products/salad/6.png
     - assets/images/products/salad/7.png
+    - assets/images/products/drinks/1.png
+    - assets/images/products/drinks/2.png
+    - assets/images/products/drinks/3.png
+    - assets/images/products/drinks/4.png
+    - assets/images/products/drinks/coke.png
+    - assets/images/products/drinks/fanta.png
+    - assets/images/products/drinks/sprit.png
 
   # fonts:
   #   - family: Schyler
