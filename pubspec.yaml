@@ -42,6 +42,14 @@ flutter:
     - assets/images/social_media/instagram.png
     - assets/icons/animation_lkjzljaq.json
     - assets/icons/fingerprint.png
+    - assets/images/products/salad/1.png
+    - assets/images/products/salad/2.png
+    - assets/images/products/salad/3.png
+    - assets/images/products/salad/4.png
+    - assets/images/products/salad/5.png
+    - assets/images/products/salad/6.png
+    - assets/images/products/salad/7.png
+
   # fonts:
   #   - family: Schyler
   #     fonts:
