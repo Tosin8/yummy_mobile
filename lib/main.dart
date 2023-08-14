@@ -4,7 +4,7 @@ import 'screens/home_page/homepage.dart';
 
 void main() {
   runApp(const MaterialApp(
-      title: 'Master Chef',
+      title: 'Yummy Mobile',
       debugShowCheckedModeBanner: false,
       home: HomePage()));
 }
